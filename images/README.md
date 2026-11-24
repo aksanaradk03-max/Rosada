@@ -1,22 +1,31 @@
 # Immagini del sito
 
-Inserisci qui le fotografie reali dei gioielli Rosáda Milano con **esattamente** questi nomi.
-Consigliato: JPG, sfondo nero, lato lungo almeno 1600 px. Finché un file manca, il sito mostra
-al suo posto un disegno al tratto statico.
+Le foto sono incorporate dentro `index.html`, così il sito funziona anche come file unico.
+Questa cartella contiene gli originali da cui vengono incorporate.
 
-| File | Dove appare | Formato |
+## Cambiare o aggiungere foto
+
+1. Sostituisci il file qui con la nuova foto, **stesso nome** (JPG, fondo nero puro, lato lungo ≥ 1600 px).
+2. Dalla cartella del progetto lancia `python3 tools/embed-images.py`.
+
+Fondo nero puro (#000) consigliato: il sito fonde il nero della foto con quello della pagina,
+così il gioiello sembra sospeso senza cornice.
+
+| File | Chiave nel codice | Dove appare |
 |---|---|---|
-| `hero.jpg` | Apertura a tutto schermo | orizzontale, ~16:9 |
-| `atelier-1.jpg` … `atelier-4.jpg` | Why Rosáda (mani al banco, oro, consulenza, pezzo finito) | verticale 3:4 |
-| `capri-ring.jpg` | Anello Capri | verticale 4:5 |
-| `faraglioni-ring.jpg` | Anello Faraglioni | 4:5 |
-| `ponza-ring.jpg` | Anello Ponza | 4:5 |
-| `pantelleria-pendant.jpg` | Ciondolo Pantelleria | 4:5 |
-| `cala-levante-pendant.jpg` | Ciondolo Cala Levante | 4:5 |
-| `iglesias-cross.jpg` | Croce Iglesias | 4:5 |
-| `nebida-cross.jpg` | Croce Nebida | 4:5 |
-| `circeo-earrings.jpg` | Orecchini Circeo | 4:5 |
-| `sabaudia-earrings.jpg` | Orecchini Sabaudia | 4:5 |
-| `place-capri.jpg`, `place-pantelleria.jpg`, `place-circeo.jpg`, `place-iglesias.jpg`, `place-ponza.jpg` | I luoghi (paesaggio; al passaggio del mouse appare il gioiello) | verticale 2:3 |
-| `custom-ring.jpg`, `custom-pendant.jpg`, `custom-cross.jpg`, `custom-earring.jpg` | Su misura: immagine della forma scelta | quadrato 1:1 |
-| `ig-1.jpg` … `ig-6.jpg` | Griglia Instagram | quadrato 1:1 |
+| `bracciale.jpg` | `bracciale` | Atelier (best seller), Collezioni, Lookbook |
+| `anello-oro-rosa.jpg` | `anelloOroRosa` | Collezioni (Capri), Lookbook |
+| `anello-argento-gemma.jpg` | `anelloArgento` | Atelier, Collezioni (Circeo), Lookbook |
+| `anello-brunito.jpg` | `anelloBrunito` | Collezioni (Pantelleria), Lookbook |
+| `dettaglio-maglie.jpg` | `dettaglioMaglie` | Processo, Lookbook |
+| `dettaglio-granuli.jpg` | `dettaglioGranuli` | Processo, Lookbook |
+
+Le foto degli anelli sono ritagliate dal post Instagram "All our rings" e sono piccole:
+vanno sostituite con gli scatti originali in alta risoluzione.
+
+## Prodotti senza foto
+
+Ciondolo Pantelleria, Croce Iglesias, Orecchini Circeo e Anello Scultura mostrano un riquadro
+con le indicazioni per lo scatto. Per aggiungere la foto: mettila in questa cartella, aggiungi
+la riga corrispondente in `tools/embed-images.py` e scrivi la chiave nel campo `img` del prodotto
+(array `PRODUCTS` in `index.html`).
